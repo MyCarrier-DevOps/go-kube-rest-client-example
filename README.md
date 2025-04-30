@@ -1,0 +1,1 @@
+# go-kube-rest-client-example

@@ -5,6 +5,10 @@ This repository provides examples of how to create Kubernetes clientset instance
 1.  **In-Cluster Client**: Connecting to the Kubernetes API server from within a pod running inside the cluster.
 2.  **External Client**: Connecting to the Kubernetes API server from outside the cluster.
 
+## Intent
+
+The primary goal of this example is to demonstrate how to configure a Kubernetes client using environment variables instead of relying on a `kubeconfig` file. This approach can simplify deployment scenarios, particularly in containerized environments or CI/CD pipelines where managing file mounts and volumes for configuration files can add complexity. By fetching configuration directly from environment variables, the application becomes more self-contained regarding its connection setup.
+
 ## Code Overview
 
 *   `main.go`: Contains example usage for both in-cluster and external clients. It attempts to create both clients and list resources (pods for in-cluster, service accounts for external) to demonstrate functionality.

@@ -161,7 +161,7 @@ func CreateInClusterKubeRestClient() (*kubernetes.Clientset, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to Kubernetes cluster: %w", err)
 	} else {
-		fmt.Println("Successfully connected to Kubernetes cluster")
+		fmt.Printf("Successfully connected to Kubernetes cluster")
 	}
 
 	// Return the clientset

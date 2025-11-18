@@ -37,7 +37,9 @@ func main() {
 	}
 
 	// example usage of the clientset to list service accounts in the "default" namespace and print their names
-	serviceAccounts, err := externalClusterClientSet.CoreV1().ServiceAccounts("default").List(context.TODO(), metav1.ListOptions{})
+	serviceAccounts, err := externalClusterClientSet.CoreV1().
+		ServiceAccounts("default").
+		List(context.TODO(), metav1.ListOptions{})
 	if err != nil {
 		panic(err)
 	}
